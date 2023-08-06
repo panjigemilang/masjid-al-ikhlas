@@ -21,7 +21,7 @@ function Article({ article }) {
           {formatDate(article.date)}
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
-        <Card.Cta>Read article</Card.Cta>
+        <Card.Cta>Baca artikel</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
@@ -41,7 +41,10 @@ export default function ArticlesIndex({ articles }) {
         <title>Artikel - Masjid Al Ikhlas</title>
         <meta name="description" content="Deskripsi" />
       </Head>
-      <SimpleLayout title="Masjid Ikhlas." intro="Deskripsi">
+      <SimpleLayout
+        title="Artikel Masjid Ikhlas"
+        intro="Berikut beberapa artikel yang kami buat agar berkenan untuk dibaca. Pantau terus untuk berbagai macam info yang akan kami posting seputar masjid Al Ikhlas Perumahan Taman Alamanda di sini!"
+      >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
             {articles.map((article) => (

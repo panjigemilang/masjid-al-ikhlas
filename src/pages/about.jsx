@@ -38,11 +38,53 @@ function MailIcon(props) {
 }
 
 export default function About() {
+  const susunanPanitia = [
+    {
+      header: 'Ketua Umum',
+      name: 'Bp Iya Suhaya , S.Ag',
+    },
+    {
+      header: 'Ketua I',
+      name: 'Bp Rahmat Hidayat ( Blok B )',
+    },
+    {
+      header: 'Ketua II',
+      name: 'Bp Muharam Indra Setiawan ( Blok F )',
+    },
+    {
+      header: 'Ketua III',
+      name: 'Bp Ahmad Yani ( Blok C )',
+    },
+    {
+      header: 'Sekretaris I',
+      name: 'Bp Agus Taufik ( Blok B )',
+    },
+    {
+      header: 'Sekretaris II',
+      name: 'Bp Suhartono ( Blok C )',
+    },
+    {
+      header: 'Bendahara I',
+      name: 'Bp Sugianto ( Blok B )',
+    },
+    {
+      header: 'Bendahara II',
+      name: 'Bp Suhartono ( Blok C )',
+    },
+    {
+      header: 'Bendahara III',
+      name: 'Bp Taufik Joni Pratama ( F )',
+    },
+  ]
+
   return (
     <>
       <Head>
-        <title>About - Masjid Al-Ikhlas</title>
-        <meta name="description" content="I’m Masjid Al-Ikhlas." />
+        <title>Tentang - Masjid Al-Ikhlas</title>
+        <meta
+          name="description"
+          content="Masjid Al-Ikhlas Perumahan Taman Alamanda."
+        />
       </Head>
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -58,39 +100,36 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Masjid Al-Ikhlas. I live in New York City, where I design the
-              future.
+              Tentang Perumahan Masjid Al-Ikhlas Taman Alamanda
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
-              </p>
-              <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
-              </p>
-              <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
-              </p>
-              <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                &emsp;Sejarah Berdiri dan Perkembangannya Tanah lokasi Masjid di
+                Perumahan Taman Alamanda Blok B RW 12 Karang Satria Tambun Utara
+                Kabupaten Bekasi merupakan komplek perumahan baru tahun 2004.
+                Sebagaimana komplek perumahan lainnya yang telah dibangun
+                Perumahan, di komplek perumahan Taman Alamanda ini pihak
+                Pengembang juga menyediakan fasilitas sosial berupa lahan untuk
+                tempat ibadah bagi umat beragama. Di antaranya adalah lahan
+                seluas 1500 M2 yangdiperuntukan sebagai tempat ibadah bagi umat
+                Islam. Untuk mengelola lahan tersebut, maka warga muslim
+                penghuni perumahan Taman AlamandaI berinisiatif untuk membangun
+                Masjid pada lahan tersebut. Pada awal berdirinya, berdasarkan
+                hasil musyawarah warga muslim perumahan taman alamanda yang
+                dilaksanakan tanggal 11 Maret 2005 serta tanggal 25 Maret 2005
+                tentang rencana pembangunan masjid dan pembentukan panitia
+                pembangunan masjid. Maka dibuatlah Proposal yang di Tanda
+                Tangani Pengurus RT dan RW Perumahan Taman Alamanda yang
+                ditujukan kepada Yayasan Bulan Sabit Merah Kedutaan Besar Uni
+                Emirat Arab. Alhamdulillah Proposal yang diajukan, disetujui
+                pada bulan april 2005 oleh Kedutaan Besar Uni Emirat Arab dalam
+                bentuk rancangan bangunan, biaya pembelian material serta biaya
+                tukang untuk pembangunan Masjid. Sementara untuk biaya makan
+                tukang ditanggung oleh warga Taman Alamanda secara swadaya
               </p>
             </div>
           </div>
-          <div className="lg:pl-20">
+          {/* <div className="lg:pl-20">
             <ul role="list">
               <SocialLink href="#" icon={TwitterIcon}>
                 Follow on Twitter
@@ -112,7 +151,21 @@ export default function About() {
                 spencer@planetaria.tech
               </SocialLink>
             </ul>
-          </div>
+          </div> */}
+        </div>
+        <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <p>
+            Susunan Panitia Pembangunan Masjid Al Ikhlas :
+            <table className="w-full">
+              {susunanPanitia.map((o) => (
+                <tr key={o.name} className="text-left">
+                  <th>{o.header}</th>
+                  <td colSpan={2}>:</td>
+                  <td>{o.name}</td>
+                </tr>
+              ))}
+            </table>
+          </p>
         </div>
       </Container>
     </>

@@ -16,14 +16,15 @@ import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image1 from '@/images/photos/image-1.png'
+import image2 from '@/images/photos/image-2.png'
+import image3 from '@/images/photos/image-3.png'
+import image4 from '@/images/photos/image-4.png'
+import image5 from '@/images/photos/image-5.png'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+import { useState } from 'react'
 
 function MailIcon(props) {
   return (
@@ -94,7 +95,7 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Baca artikel</Card.Cta>
     </Card>
   )
 }
@@ -108,28 +109,37 @@ function SocialLink({ icon: Icon, ...props }) {
 }
 
 function Newsletter() {
+  const [message, setMessage] = useState('')
+  const sendMessage = () => {
+    const url = `https://wa.me/+6281268038463?text=${encodeURIComponent(
+      message
+    )}`
+    window.open(url, '_blank')
+  }
+
   return (
     <form
-      action="/thank-you"
+      onSubmit={sendMessage}
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">Hubungi kami</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        Jika ada pesan yang ingin disampaikan kepada kami, silahkan kirimkan
+        pesan anda melalui WhatsApp salah satu pengurus kami.
       </p>
       <div className="mt-6 flex">
         <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
+          type="text"
+          placeholder="Pesan"
+          aria-label="Pesan"
+          onChange={(e) => setMessage(e.target.value)}
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
-          Join
+          Kirim
         </Button>
       </div>
     </form>
@@ -250,18 +260,18 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>Masjid Al-Ikhlas</title>
+        <title>Masjid Al Ikhlas</title>
         <meta name="description" content="Masjid al Ikhlas" />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Masjid Al-Ikhlas.
+            Masjid Al Ikhlas.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            [Description]
+            Masjid Al Ikhlas Perumahan Taman Alamanda
           </p>
-          <div className="mt-6 flex gap-6">
+          {/* <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com"
               aria-label="Follow on Twitter"
@@ -272,7 +282,7 @@ export default function Home({ articles }) {
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
-          </div>
+          </div> */}
         </div>
       </Container>
       <Photos />
