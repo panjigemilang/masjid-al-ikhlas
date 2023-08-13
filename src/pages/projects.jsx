@@ -3,47 +3,153 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logo from '@/images/logos/masjid.png'
 
 const projects = [
   {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    name: 'Penasehat',
+    description: (
+      <>
+        Ketua Dewan Kemakmuran Masjid Al Ikhlas <br />
+        Ketua RW 012
+      </>
+    ),
+    logo,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    name: 'Pengawas',
+    description: (
+      <>
+        Saihu <br />
+        Ahmad Tukiyo <br />
+        Ketua RT 001 <br />
+        Ketua RT 002 <br />
+        Ketua RT 003 <br />
+        Ketua RT 004
+      </>
+    ),
+    logo,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    name: 'Ketua',
+    description: 'Rahmat Hidayat',
+    logo,
   },
   {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    name: 'Wakil Ketua',
+    description: 'Abdul Said',
+    logo,
   },
   {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: 'Sekretaris',
+    description: (
+      <>
+        Hendrik <br />
+        Eppy Syafitri
+      </>
+    ),
+    logo,
+  },
+  {
+    name: 'Bendahara',
+    description: (
+      <>
+        Sugianto <br />
+        Sujarwono
+      </>
+    ),
+    logo,
+  },
+  {
+    name: 'Seksi Penggalangan Dana',
+    description: (
+      <div className="flex">
+        <div className="w-1/2">
+          Internal: <br />
+          Eka Januar Santoso <br />
+          Andi Sumarno <br />
+          Afandi <br />
+          Sumarno <br />
+          Mahruf <br />
+          Nurman
+          <br />
+          Nyari Wahyudi <br />
+          M. Taufiq <br />
+          Muksin <br />
+          Agus Supriyanto <br />
+          Darso
+        </div>
+        <div className="w-1/2">
+          Eksternal: <br />
+          Iskandar <br />
+          Parwanto <br />
+          Dede Rukmayadi <br />
+          Ateng <br />
+          Jamal <br />
+          Doni <br />
+          Kaslam <br />
+          Nurrohman <br />
+          Agus Taufik <br />
+          Imat Hismatullah
+        </div>
+      </div>
+    ),
+    logo,
+  },
+  {
+    name: 'Seksi Perencanaan dan Teknis Pelaksanaan',
+    description: (
+      <>
+        Jarwoto <br />
+        Subandi <br />
+        Muhammad Alif <br />
+        Muhammad Kholis Pertama
+      </>
+    ),
+    logo,
+  },
+  {
+    name: 'Seksi Humas dan Dokumentasi',
+    description: (
+      <>
+        Hari Daryono Sugeng ST <br />
+        James <br />
+        Suhartono <br />
+        Nurhadi <br />
+        Panji Gemilang
+      </>
+    ),
+    logo,
+  },
+  {
+    name: 'Seksi Umum dan Perlengkapan',
+    description: (
+      <>
+        Joni <br />
+        Supardi <br />
+        Sukirno <br />
+        Eka Yulianta <br />
+        Ari Jahari
+      </>
+    ),
+    logo,
+  },
+  {
+    name: 'Seksi Keamanan',
+    description: (
+      <>
+        Kusmana <br />
+        Huda Mustafa <br />
+        Sukamto <br />
+        Keamanan RW 012
+      </>
+    ),
+    logo,
+  },
+  {
+    name: 'Seksi Konsumsi',
+    description: 'Majelis Ta’lim Masjid Al Ikhlas',
+    logo,
   },
 ]
 
@@ -62,17 +168,17 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Proyek - Masjid Al Ikhlas</title>
+        <title>Program - Masjid Al Ikhlas</title>
         <meta
           name="description"
-          content="Proyek Masjid Al Ikhlas Perumahan Taman Alamanda"
+          content="Program Masjid Al Ikhlas Perumahan Taman Alamanda"
         />
       </Head>
       <SimpleLayout
-        title="Proyek Masjid Al Ikhlas Perumahan Taman Alamanda"
-        intro="Pada halaman ini kami menjabarkan beberapa proyek masjid Al Ikhlas yang sedang berjalan atau sudah selesai."
+        title="Program Masjid Al Ikhlas Perumahan Taman Alamanda"
+        intro="Pada halaman ini kami menjabarkan beberapa program masjid Al Ikhlas yang sedang berjalan atau sudah selesai."
       >
-        {/* <ul
+        <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
@@ -87,16 +193,17 @@ export default function Projects() {
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                {/* <Card.Link href={project.link.href}>{project.name}</Card.Link> */}
+                {project.name}
               </h2>
               <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              {/* <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
-              </p>
+              </p> */}
             </Card>
           ))}
-        </ul> */}
+        </ul>
       </SimpleLayout>
     </>
   )

@@ -40,40 +40,145 @@ function MailIcon(props) {
 export default function About() {
   const susunanPanitia = [
     {
-      header: 'Ketua Umum',
-      name: 'Bp Iya Suhaya , S.Ag',
+      header: 'Pembina /  Penasehat',
+      name: (
+        <>
+          Hari Daryono,SPd <br />
+          Lulus Suprayogo,ST ( Ketua Rw 012 )
+        </>
+      ),
     },
     {
-      header: 'Ketua I',
-      name: 'Bp Rahmat Hidayat ( Blok B )',
+      header: 'Ketua',
+      name: 'Arif Sihabudin,SE',
     },
     {
-      header: 'Ketua II',
-      name: 'Bp Muharam Indra Setiawan ( Blok F )',
+      header: 'Sekretaris',
+      name: (
+        <>
+          Sugianto <br />
+          Hendrik
+        </>
+      ),
     },
     {
-      header: 'Ketua III',
-      name: 'Bp Ahmad Yani ( Blok C )',
+      header: 'Bendahara',
+      name: (
+        <>
+          Sujarwono <br />
+          Imat Hismatulloh
+        </>
+      ),
     },
     {
-      header: 'Sekretaris I',
-      name: 'Bp Agus Taufik ( Blok B )',
+      header: 'Sie Ibadah & Dakwah',
+      name: (
+        <>
+          Abdul Said, SE <br />
+          Suhartono, ST
+        </>
+      ),
     },
     {
-      header: 'Sekretaris II',
-      name: 'Bp Suhartono ( Blok C )',
+      header: 'Sie  Pembangunan dan Perawatan',
+      name: (
+        <>
+          Rahmat Hidayat,SE <br />
+          Jarwoto,ST <br />
+          Joni <br />
+          Ahmad Tukio <br />
+          Tubandi <br />
+          Misno S
+        </>
+      ),
     },
     {
-      header: 'Bendahara I',
-      name: 'Bp Sugianto ( Blok B )',
+      header: 'Sie Kerumah- Tanggaan',
+      name: (
+        <>
+          Eka Yulianta,SPd Azwardi <br />
+          Andi Lala <br />
+          Kandar <br />
+          Hendra
+        </>
+      ),
     },
     {
-      header: 'Bendahara II',
-      name: 'Bp Suhartono ( Blok C )',
+      header: 'Sie Humas dan Informatika',
+      name: (
+        <>
+          Sugeng,ST Supardi <br />
+          James Wijayanto,ST <br />
+          Ashadi Cahyadi
+        </>
+      ),
     },
     {
-      header: 'Bendahara III',
-      name: 'Bp Taufik Joni Pratama ( F )',
+      header: 'Sie Sosial dan Kemasyarakatan',
+      name: (
+        <>
+          Agus Supriyanto Mahruf <br />
+          Mahruf <br />
+          Taufik
+        </>
+      ),
+    },
+    {
+      header: 'Sie Pendidikan dan Kaderisasi Remaja',
+      name: (
+        <>
+          Satiri,SPd <br />
+          Eppy Syafitri <br />
+          Agus Aprianto
+        </>
+      ),
+    },
+    {
+      header: 'Sie Keamanan',
+      name: (
+        <>
+          Rully <br />
+          Huda Mustofa <br />
+          Sukamto <br />
+          Muklis Solimin
+        </>
+      ),
+    },
+    {
+      header: 'Rukun Kematian',
+      name: (
+        <>
+          Agus Taufiq,Spdi <br />
+          Nurrochman,Spd <br />
+          Amiratno, SH <br />
+          Halimah
+        </>
+      ),
+    },
+    {
+      header: 'ZIS',
+      name: (
+        <>
+          Sakim <br />
+          Saring <br />
+          Parwanto
+        </>
+      ),
+    },
+    {
+      header: "Majelis Ta'lim Ibu-Ibu",
+      name: 'Ibu Devi',
+    },
+    {
+      header: 'Remaja Islam',
+      name: (
+        <>
+          Andika <br />
+          Rizky <br />
+          Awang <br />
+          Aditya
+        </>
+      ),
     },
   ]
 
@@ -158,10 +263,13 @@ export default function About() {
             Susunan Panitia Pembangunan Masjid Al Ikhlas :
             <table className="w-full">
               {susunanPanitia.map((o) => (
-                <tr key={o.name} className="text-left">
-                  <th>{o.header}</th>
-                  <td colSpan={2}>:</td>
-                  <td>{o.name}</td>
+                <tr
+                  key={o.name}
+                  className="border-b-2 text-left odd:bg-gray-50"
+                >
+                  <th className="px-3">{o.header}</th>
+                  <td>:</td>
+                  <td className="p-3">{o.name}</td>
                 </tr>
               ))}
             </table>

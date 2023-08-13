@@ -121,9 +121,10 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/about">Tentang</MobileNavItem>
-                <MobileNavItem href="/articles">Artikel</MobileNavItem>
-                <MobileNavItem href="/projects">Proyek</MobileNavItem>
+                <MobileNavItem href="/">Beranda</MobileNavItem>
+                <MobileNavItem href="/about">Tentang Kami</MobileNavItem>
+                <MobileNavItem href="/articles">Kegiatan</MobileNavItem>
+                <MobileNavItem href="/projects">Program</MobileNavItem>
                 {/* <MobileNavItem href="/speaking">Speaking</MobileNavItem> */}
                 {/* <MobileNavItem href="/uses">Uses</MobileNavItem> */}
               </ul>
@@ -162,10 +163,10 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">Tentang</NavItem>
-        <NavItem href="/articles">Artikel</NavItem>
-        <NavItem href="/projects">Proyek</NavItem>
+        <NavItem href="/">Beranda</NavItem>
+        <NavItem href="/about">Tentang Kami</NavItem>
+        <NavItem href="/articles">Kegiatan</NavItem>
+        <NavItem href="/projects">Program</NavItem>
         {/* <NavItem href="/speaking">Speaking</NavItem> */}
         {/* <NavItem href="/uses">Uses</NavItem> */}
       </ul>
@@ -409,7 +410,7 @@ export function Header() {
                   </AvatarContainer>
                 )}
               </div>
-              <div className="flex flex-1 justify-end md:justify-center">
+              <div className="flex justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>

@@ -40,6 +40,11 @@ export default function Speaking() {
         intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
       >
         <div className="space-y-20">
+          <div className="licenses">
+            <a href="https://www.vecteezy.com/free-vector/point">
+              Point Vectors by Vecteezy
+            </a>
+          </div>
           <SpeakingSection title="Conferences">
             <Appearance
               href="/articles/artikel-1"
